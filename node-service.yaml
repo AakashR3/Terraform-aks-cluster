@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-test-service
+  namespace: aakash
+spec:
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 3000
+    targetPort: 80   # Update this to 80
+  selector:
+    app: demo-test

@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-test
+  namespace: aakash 
+spec:
+  replicas: 1
+  revisionHistoryLimit: 0
+  selector:
+    matchLabels:
+      app: demo-test
+  template:
+    metadata:
+      labels:
+        app: demo-test
+    spec:
+      containers:
+      - name: demo-test
+        image: containerregprojectx.azurecr.io/uicentral:250
+        resources:
+          limits:
+            memory: "3Gi"
+            cpu: "500m"
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+          protocol: TCP
+      imagePullSecrets:
+      - name: aakash
