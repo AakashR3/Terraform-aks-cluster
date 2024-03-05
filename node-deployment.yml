@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: demo-test
-        image: containerregprojectx.azurecr.io/demo-test:28
+        image: containerregprojectx.azurecr.io/demo-test:latest
         resources:
           limits:
             memory: "3Gi"
