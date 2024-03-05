@@ -23,7 +23,7 @@ spec:
             cpu: "500m"
         imagePullPolicy: Always
         ports:
-        - containerPort: 80
+        - containerPort: 5000
           protocol: TCP
       imagePullSecrets:
       - name: aakash
